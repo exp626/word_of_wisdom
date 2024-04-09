@@ -41,7 +41,7 @@ func NewServer(port int, equihash *pkg.EquihashPoW) *server {
 }
 
 func (s *server) Listen() error {
-	listener, err := net.Listen("tcp", fmt.Sprintf(":%d", s.port))
+	listener, err := net.Listen("tcp", fmt.Sprintf("0.0.0.0:%d", s.port))
 	if err != nil {
 		return err
 	}
