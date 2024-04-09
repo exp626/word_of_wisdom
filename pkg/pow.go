@@ -49,7 +49,7 @@ func (p *EquihashPoW) PoW(dataBytes []byte) (int, []int, error) {
 	if err != nil {
 		return 0, nil, err
 	}
-	// prevHash = []byte
+
 	nonce := 0
 	shaDigest := sha256.New()
 	// digest sha256 as [ byte byte .. x32]
