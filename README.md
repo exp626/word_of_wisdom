@@ -19,3 +19,13 @@ The time complexity is proportional to K2^{N/(K+1)}, and memory complexity to 2^
 K and N are pre-installed on the client and on the server. This is a simplification adopted by me in order not to inflate the implementation code. For a real task, I would transmit these values over the network so that it would be possible to adjust the complexity.
 
 The algorithm of action is simple, when connected, the client receives a challenge string, for which he must calculate the solution and send it back to the server. If the decision was correct, the server will issue a quote. Otherwise, the client will be disconnected.
+
+### Docker
+
+```bash
+# Run client and server just for demo
+$ docker-compose up
+
+# Run server listening on 8080 port
+$ docker-compose up -d server
+```
